@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+   /* border: 5px solid black; */
+}
+
+section {
+    padding: 2.5rem 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 , h2, h3 {
+    margin-top: 0;
+}
+
+/* Button Classes */
+
+.btn {
+    background-color: #A59678;
+    color: #FFF;
+    border-radius: 100px;
+    text-decoration:  none;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    text-transform: uppercase;
+}
+
+.nav__item--btn {
+    margin-top: 0.6rem;
+    padding: 0.2em 0.8em;
+}
+
+.CTA-btn {
+    font-size: 24px;
+    display: inline-block; /* required so that the margin property would work on an <a> tag (inline-element) */ 
+    margin: 1rem 0 1rem 0;
+   }
+
+/* Navigation - Header */
+
+header {
+   /* width: 100%; */
+    background-color: #2E323F;
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+}
+
+.header__inner {
+    padding-top: 1rem;
+    text-align: center;
+    position: relative;   
+}
+
+.nav {
+    visibility: hidden; /* Hide at mobile size */
+    height: 0;
+   }
+
+.nav-toggle {
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute; 
+    left: 0;
+    padding-top: 2px;
+    transition: opacity 250ms ease;
+}
+
+.nav--visible {
+    visibility:visible ;
+    height: auto;
+    padding-bottom: 25px;
+}
+
+.nav__list {
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 0;
+}
+
+.nav__link {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.nav__link:hover,
+.nav__link:focus,
+.nav-toggle:focus,
+.nav-toggle:hover,
+.footer__nav__link:focus,
+.footer__nav__link:hover,
+.btn:focus,
+.btn:hover {
+    opacity: 0.65;
+}
+
+/* Navigation - Footer */
+
+footer {
+    background: #3B4050;
+    color: white;
+    width: 100%;
+}
+
+.footer-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 2rem 0 0 0;
+    font-size: 3rem;
+    color: #FFF;
+}
+
+.footer__nav__list {
+    padding: 0 0 1rem 0;
+    margin: 1.8rem 0 0 0;
+    list-style: none;
+    font-size: 1.125rem;
+   /* font-weight: bold; */
+}
+
+.list-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    color: #A59678;
+    font-size: 1.5rem;
+    margin-top: .7em;
+}
+
+.footer__nav__item {
+    margin-top: .7em;
+    color: #6F737F;
+}
+
+.footer__nav__link{
+    color: #6F737F;
+    text-transform: capitalize;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Sections and Divs */
+
+.hero-section-wrapper {
+    background-color: #3B4050;
+}
+
+.hero-section__title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 1.05em;
+    color: #FFF;
+}
+
+.hero-section__title--span {
+    color: #A59678;
+}
+
+.hero-section__text {
+    font-size: 24px;
+    color: #6F737F;
+}
+
+.section-2 {
+    background-color: #6F737F;
+}
+
+.section-2__title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #A59678;
+}
+
+.section-2__text {
+    font-size: 18px;
+    line-height: 1.3em;
+}
+
+.section-3__title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    color: #A59678;
+    font-size: 2.2rem;
+}
+
+.section-3__text {
+    font-size: 1.25rem;
+    line-height: 1.4em;
+}
+
+.section-3__card-wrapper{
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* ensure that all cards become the same height */
+}
+
+.small-card {
+    background-color: #3B4050;
+    color: #FFF;
+    text-align: center;
+    padding: 1.75rem;
+    margin: 1rem 0 0 0;
+    line-height: 1.5em; 
+   /* border: 4px solid yellow; */
+}
+
+
+/* For medium screens like tablets */
+@media (min-width: 850px) {
+    
+    .flex {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .header__inner {
+        padding-bottom: 1rem;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        visibility: visible;
+       }
+
+    .nav--visible {
+        padding-bottom: 0px;
+    }
+
+    .nav__list {
+        margin: 0 0; 
+    }
+
+    .nav__item {
+        margin-left: 1rem;
+    }
+
+    .nav__item--btn {
+        margin-top: 0;
+    }
+
+    footer {
+        padding: 2rem 0 2rem 0;
+    }
+
+    .footer-title {
+        text-align: center;
+        font-size: 60px;
+    }
+
+    .footer__company-bio {
+        width: 35%;
+    }
+
+    .footer__nav__list {
+        padding: 0 0 1.5rem 0;
+    }
+
+    .list-title {
+        padding: 0 0 0.5rem 0;
+    }
+
+    section {
+        padding: 4rem 0;
+    }
+
+    .hero-section__title {
+        font-size: 70px;
+        margin-bottom: 0px;
+        margin-right: 1.8rem;   
+    }
+
+    .col-hero-2 {
+        align-self: flex-end;  
+    }
+
+    .section-2 {
+        text-align: center;
+    }
+
+    .section-2 .col {
+        width: 25%;
+    }
+
+    .section-3__card-wrapper{
+        display: flex;
+        flex-direction: row;
+        flex: 1; /* ensure that all cards become the same height */
+        width: 30%;
+        justify-content: space-between;
+    }
+
+    .small-card {
+        width: 32%;
+    }
+
+    .flex-s3 {
+        flex-wrap: wrap;
+    }
+    
+}
+
+/* For laptops and desktops */
+@media (min-width: 1100px) { 
+
+    .flex-s3 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hero-section-wrapper {
+        padding: 5rem 0 6rem 0;
+    }
+
+    .hero-section__title {
+        font-size: 90px;
+    }
+    
+    .section-3__card-wrapper{
+        flex-direction: column;
+        flex: 1; /* ensure that all cards become the same height */
+        margin-left: 50px;
+        justify-content: flex-start; 
+    }
+
+    .small-card {
+        width: 100%;
+    }
+
+    .col-s3-1 {
+        width: 70%
+    }
+
+}
+
